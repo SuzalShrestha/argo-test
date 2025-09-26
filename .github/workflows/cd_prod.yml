@@ -36,6 +36,6 @@ jobs:
           sed -i 's|image: suzalshrestha/test:.*|image: suzalshrestha/test:${{ github.sha }}|' manifest.yml
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add argo-deployment/manifest.yml
+          git add manifest.yml
           git commit -m "Update test image to ${{ github.sha }}"
           git push https://${PAT}@github.com/SuzalShrestha/argo-deployment.git main

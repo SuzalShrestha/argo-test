@@ -25,7 +25,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: test/argo-test:${{ github.sha }}
+          tags: suzalshrestha/test:${{ github.sha }}
 
       - name: Clone staging-ops repo, update, and push
         env:

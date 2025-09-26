@@ -33,9 +33,9 @@ jobs:
         run: |
           git clone https://github.com/SuzalShrestha/argo-deployment
           cd argo-deployment
-          sed -i 's|image: suzalshrestha/test:.*|image: suzalshrestha/test:${{ github.sha }}|' argo-deployment/manifest.yml
+          sed -i 's|image: suzalshrestha/test:.*|image: suzalshrestha/test:${{ github.sha }}|' argo-deployment/cd_prod.yml
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add argo-deployment/manifest.yml
+          git add argo-deployment/cd_prod.yml
           git commit -m "Update test image to ${{ github.sha }}"
           git push https://${PAT}@github.com/SuzalShrestha/argo-deployment.git main

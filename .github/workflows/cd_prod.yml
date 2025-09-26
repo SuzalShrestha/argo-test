@@ -25,6 +25,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: suzalshrestha/test:${{ github.sha }}
 
       - name: Clone staging-ops repo, update, and push
